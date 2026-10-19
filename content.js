@@ -319,12 +319,12 @@ window.SITE_CONTENT = {
               repeat: "还会再吃"
             },
             {
-              title: "鸭脚煲",
+              title: "老友粉",
               place: "柳州",
-              type: "夜宵",
-              image: "./assets/images/food-hero.jpg",
-              alt: "鸭脚煲与夜宵餐桌的示意图片（占位）",
-              note: "鸭脚炖得软，汤里带着酸笋和辣椒的香气。适合几个人围着一锅慢慢吃，把夜宵吃成一场小聚。",
+              type: "米粉",
+              image: "./assets/images/liuzhou-laoyoufen.jpg",
+              alt: "柳州老友粉，配牛肉、酸笋、黄瓜丝和柠檬",
+              note: "酸笋、豆豉和牛肉把味道压得很足，黄瓜丝和半片柠檬又把酸辣提亮。粉吸饱了酱汁，吃到后面还是想再拌两口。",
               repeat: "下次还点"
             },
             {
