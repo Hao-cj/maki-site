@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Maki 的个人档案：按地点整理的旅行记录与网页推文推荐。"
+    />
+    <meta name="theme-color" content="#090908" />
+    <title>Maki｜旅行与推荐</title>
+    <script>
+      document.documentElement.classList.replace("no-js", "js");
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="home-page">
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <div class="page-progress" aria-hidden="true">
+      <span data-progress-bar></span>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="返回主页顶部">
+        <span class="brand__mark brand__mark--avatar">
+          <img
+            src="./assets/images/avatar.jpg"
+            alt="Maki 的头像"
+            width="44"
+            height="44"
+          />
+        </span>
+        <span class="brand__text">Maki <span>MAKI</span></span>
+      </a>
+
+      <div class="header__right">
+        <p class="header__note">PERSONAL ARCHIVE · 2026</p>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./travel.html">旅游</a>
+          <a href="./recommendations.html">推荐</a>
+          <a href="#about">关于</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          data-menu-toggle
+        >
+          <span>MENU</span>
+          <span class="menu-toggle__lines" aria-hidden="true">
+            <i></i><i></i>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>
+      <nav aria-label="移动端导航">
+        <a href="./travel.html"><span>01</span>旅游</a>
+        <a href="./recommendations.html"><span>02</span>推荐</a>
+        <a href="#about"><span>03</span>关于 Maki</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <p>吃点好的，去远一点，<br />保持好奇。</p>
+        <span>MAKI · PERSONAL ARCHIVE</span>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="home-hero" id="top" aria-labelledby="home-hero-title" data-hero>
+        <div class="home-hero__media" aria-hidden="true">
+          <img
+            src="./assets/images/food-hero.jpg"
+            alt=""
+            data-hero-image
+            fetchpriority="high"
+          />
+        </div>
+        <div class="home-hero__veil" aria-hidden="true"></div>
+        <div class="hero__light" aria-hidden="true"></div>
+        <div class="hero__frame" aria-hidden="true"></div>
+
+        <div class="home-hero__content container">
+          <p class="eyebrow home-hero__eyebrow">
+            <span>MAKI / PERSONAL ARCHIVE</span>
+            <span>EST. 2026</span>
+          </p>
+
+          <h1 class="home-hero__title" id="home-hero-title">
+            <span>吃好，走远，</span>
+            <span><em>保持好奇</em>。</span>
+          </h1>
+
+          <div class="home-hero__bottom">
+            <div class="home-hero__intro">
+              <p>
+                我是 Maki。这里收藏我吃过的味道、走过的地方，
+                以及觉得值得分享的网页与推文。
+              </p>
+              <span>EATER / TRAVELER / CURIOUS HUMAN</span>
+            </div>
+            <a class="circle-link" href="#categories" aria-label="浏览内容分类">
+              <span>INDEX</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v16M6 14l6 6 6-6" />
+              </svg>
+            </a>
+          </div>
+
+          <nav
+            class="home-hero__chapters home-hero__chapters--two"
+            aria-label="快速分类导航"
+            data-home-chapters
+          ></nav>
+        </div>
+
+        <p class="home-hero__aside" aria-hidden="true">EAT · WANDER · COLLECT</p>
+        <p class="home-hero__coords" aria-hidden="true">
+          <span>30.2°N</span>
+          <span>120.1°E</span>
+        </p>
+      </section>
+
+      <section class="category-section section-pad" id="categories" aria-labelledby="categories-title">
+        <div class="container">
+          <div class="section-kicker" data-reveal>
+            <span class="section-kicker__num">01</span>
+            <span>EXPLORE</span>
+            <i aria-hidden="true"></i>
+            <span>内容分类</span>
+          </div>
+
+          <div class="category-section__head">
+            <h2 id="categories-title" data-reveal>
+              目录<br /><em></em>
+            </h2>
+            <div data-reveal>
+              <span>SELECT A CHAPTER</span>
+              <p>
+                去远一点，看看路上有什么，再看看别人正在创造什么。
+                每个分类都有自己的独立页面。
+              </p>
+            </div>
+          </div>
+
+          <div class="category-layout">
+            <div class="category-list" data-reveal data-category-list></div>
+
+            <aside class="category-preview" aria-hidden="true" data-reveal>
+              <div class="category-preview__image">
+                <img
+                  src="./assets/images/siguniang.jpg"
+                  alt=""
+                  data-category-preview
+                />
+              </div>
+              <div class="category-preview__caption">
+                <span data-category-index>01</span>
+                <span data-category-caption>TRAVEL JOURNAL</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-about section-pad" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-kicker" data-reveal>
+            <span class="section-kicker__num">02</span>
+            <span>ABOUT MAKI</span>
+            <i aria-hidden="true"></i>
+            <span>关于我</span>
+          </div>
+
+          <div class="home-about__grid">
+            <h2 id="about-title" data-reveal>
+              爱吃，爱走，<br /><em>也爱收藏。</em>
+            </h2>
+            <div class="home-about__copy" data-reveal>
+              <p>
+                我是 Maki，一个对好吃的东西、陌生的地方和新鲜想法没有抵抗力的人。
+                喜欢突发的旅游计划，平时会把喜欢的网页和推文悄悄存进收藏夹。
+              </p>
+              <p>
+                这个网站不追求完整攻略，只想认真留下那些让我停下来、
+                多看一眼的东西。
+              </p>
+            </div>
+            <div class="home-about__facts" data-reveal>
+              <div><span>CURRENTLY</span><strong>保持好奇，持续出发</strong></div>
+              <div><span>INTO</span><strong>食物 · 美景 · 出发 </strong></div>
+              <div><span>ARCHIVE</span><strong>2023 — 2026</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__glow" aria-hidden="true"></div>
+        <div class="contact__word" aria-hidden="true">HELLO</div>
+        <div class="container contact__content">
+          <div class="section-kicker section-kicker--light" data-reveal>
+            <span class="section-kicker__num">03</span>
+            <span>KEEP IN TOUCH</span>
+            <i aria-hidden="true"></i>
+            <span>保持联系</span>
+          </div>
+
+          <p class="contact__lead" data-reveal>
+            有好吃的店、想去的地方，或者值得收藏的链接，
+            <br />都欢迎来和我交换。
+          </p>
+          <h2 id="contact-title" data-reveal>
+            下次见面，<br /><em>一起吃饭。</em>
+          </h2>
+
+          <a class="contact__mail" href="mailto:hello@yourname.com" data-reveal>
+            <span>3572735471@qq.com</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <div class="contact__social" data-reveal>
+            <a href="#top">INSTAGRAM</a>
+            <a href="#top">Top</a>
+            <a href="#top">BOOKMARKS</a>
+          </div>
+        </div>
+
+        <footer class="site-footer container">
+          <p>© 2026 MAKI · PERSONAL ARCHIVE</p>
+          <p>本页面为视觉样稿 · 图文与联系方式均可替换</p>
+          <a href="#top">BACK TO TOP ↑</a>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./content.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+# Local verification and publishing artifacts
+previews/
+dist/
+Sucai/
+Maki-个人网站.zip
+.chrome-*/
+_verify*.js
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

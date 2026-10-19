@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Maki 的旅行记录：按城市与地点整理，记录看见的景色和顺路吃到的味道。"
+    />
+    <meta name="theme-color" content="#090908" />
+    <title>旅游｜按地点收藏景色与美食 · Maki</title>
+    <script>
+      document.documentElement.classList.replace("no-js", "js");
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="travel-page">
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <div class="page-progress" aria-hidden="true">
+      <span data-progress-bar></span>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="./index.html" aria-label="返回主页">
+        <span class="brand__mark">MK</span>
+        <span class="brand__text">Maki <span>MAKI</span></span>
+      </a>
+
+      <div class="header__right">
+        <p class="header__note">TRAVEL BY PLACE · 2023—2026</p>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./travel.html">旅游</a>
+          <a href="./recommendations.html">推荐</a>
+          <a href="./index.html#contact">联系</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          data-menu-toggle
+        >
+          <span>MENU</span>
+          <span class="menu-toggle__lines" aria-hidden="true">
+            <i></i><i></i>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>
+      <nav aria-label="移动端导航">
+        <a href="./index.html"><span>01</span>返回主页</a>
+        <a href="./travel.html"><span>02</span>目的地</a>
+        <a href="./recommendations.html"><span>03</span>推荐</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <p>按地点出发，<br />把景色和味道一起带走。</p>
+        <span>MAKI · DESTINATION NOTES</span>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title" data-hero>
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="./assets/images/hero-mountains.jpg"
+            alt=""
+            data-hero-image
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__light" aria-hidden="true"></div>
+        <div class="hero__frame" aria-hidden="true"></div>
+
+        <div class="hero__content container">
+          <p class="eyebrow hero__eyebrow">
+            <span>DESTINATIONS / 旅行记录</span>
+            <span>VOL. 02 / 2023—2026</span>
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__line"><span>按地点，</span></span>
+            <span class="hero__line hero__line--indent"
+              ><span><em>翻开世界</em>。</span></span
+            >
+          </h1>
+
+          <div class="hero__bottom">
+            <div class="hero__intro">
+              <p>
+                每到一个地方，先记下看见的景色；遇到值得再吃一次的味道，也一起留下。
+                先选城市，再翻开它的景点与味道。
+              </p>
+              <span class="hero__role" data-travel-stats>04 DESTINATIONS / 11 SCENERIES / 09 TASTES</span>
+            </div>
+
+            <a class="circle-link" href="#destinations" aria-label="浏览目的地目录">
+              <span>INDEX</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v16M6 14l6 6 6-6" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__foot">
+            <span data-destination-count>04 DESTINATIONS</span>
+            <span>SCENERY + FOOD</span>
+            <span>STORIES STILL ONGOING</span>
+          </div>
+        </div>
+
+        <p class="hero__aside" aria-hidden="true">TRAVEL BY PLACE / 2023—2026</p>
+        <p class="hero__coords" aria-hidden="true">
+          <span>36.2°N</span>
+          <span>103.8°E</span>
+        </p>
+      </section>
+
+      <section
+        class="destinations section-pad"
+        id="destinations"
+        aria-labelledby="destinations-title"
+      >
+        <div class="container">
+          <div class="section-kicker" data-reveal>
+            <span class="section-kicker__num">01</span>
+            <span>SELECT A PLACE</span>
+            <i aria-hidden="true"></i>
+            <span>目的地目录</span>
+          </div>
+
+          <div class="destinations__head">
+            <h2 id="destinations-title" data-reveal>
+              四个目的地，<br /><em>九种记忆。</em>
+            </h2>
+            <div class="destinations__intro" data-reveal>
+              <span data-destinations-stats>04 DESTINATIONS / 2023—2026</span>
+              <p>
+                从柳江到泉水，再到苏州的水巷和南京的梧桐。
+                点选一个城市，先看景点，再决定要不要顺路吃一顿。
+              </p>
+            </div>
+          </div>
+
+          <div class="destination-explorer" data-reveal>
+            <nav
+              class="place-list"
+              aria-label="按地点浏览"
+              data-place-list
+            ></nav>
+            <div
+              class="place-detail"
+              id="destination-detail"
+              data-place-detail
+              aria-live="polite"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interlude travel-interlude" aria-labelledby="interlude-title">
+        <img
+          class="interlude__image"
+          src="./assets/images/road.jpg"
+          alt=""
+          loading="lazy"
+          aria-hidden="true"
+        />
+        <div class="interlude__veil" aria-hidden="true"></div>
+        <div class="interlude__label" aria-hidden="true">A NOTE TO MYSELF · 02</div>
+        <div class="container interlude__content" data-reveal>
+          <p class="interlude__index">02 / INTERLUDE</p>
+          <blockquote id="interlude-title">
+            “记住一个地方，<br />
+            <em>往往是从一顿饭开始。</em>”
+          </blockquote>
+          <p class="interlude__meta">写于某次长途旅行之后 · 2025</p>
+        </div>
+      </section>
+
+      <section
+        class="fragments section-pad"
+        id="fragments"
+        aria-labelledby="fragments-title"
+      >
+        <div class="container">
+          <div class="section-kicker" data-reveal>
+            <span class="section-kicker__num">03</span>
+            <span>FRAGMENTS</span>
+            <i aria-hidden="true"></i>
+            <span>沿途碎片</span>
+          </div>
+
+          <div class="fragments__head">
+            <h2 id="fragments-title" data-reveal>
+              把世界装进<br /><em>一些静止的画面。</em>
+            </h2>
+            <p data-reveal>
+              有些风景来不及写成长篇，<br />
+              就先留在取景框里。
+            </p>
+          </div>
+
+          <div class="fragments__grid" data-fragment-grid></div>
+        </div>
+      </section>
+
+      <section class="contact" id="travel-end" aria-labelledby="travel-end-title">
+        <div class="contact__glow" aria-hidden="true"></div>
+        <div class="contact__word" aria-hidden="true">NEXT</div>
+        <div class="container contact__content">
+          <div class="section-kicker section-kicker--light" data-reveal>
+            <span class="section-kicker__num">04</span>
+            <span>END OF CHAPTER</span>
+            <i aria-hidden="true"></i>
+            <span>章节结束</span>
+          </div>
+
+          <p class="contact__lead" data-reveal>
+            目的地到这里，故事还在继续。
+            <br />回到目录，再选一个地方继续翻。
+          </p>
+          <h2 id="travel-end-title" data-reveal>
+            下一站，<br /><em>继续出发。</em>
+          </h2>
+
+          <a class="contact__mail" href="#destinations" data-reveal>
+            <span>BACK TO DESTINATIONS</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <div class="contact__social" data-reveal>
+            <a href="./index.html">返回主页</a>
+            <a href="./recommendations.html">推荐</a>
+            <a href="./index.html#about">关于 Maki</a>
+          </div>
+        </div>
+
+        <footer class="site-footer container">
+          <p>© 2026 MAKI · DESTINATION NOTES</p>
+          <p>旅行记录分页 · 图文均为示例内容</p>
+          <a href="#top">BACK TO TOP ↑</a>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="story-dialog" data-story-dialog aria-labelledby="story-dialog-title">
+      <div class="story-dialog__media">
+        <div class="story-dialog__stage" data-dialog-stage>
+          <img class="story-dialog__image" src="" alt="" data-dialog-image decoding="async" />
+          <img
+            class="story-dialog__image"
+            src=""
+            alt=""
+            aria-hidden="true"
+            data-dialog-image-next
+            decoding="async"
+          />
+          <button
+            class="story-dialog__nav story-dialog__nav--prev"
+            type="button"
+            data-dialog-prev
+            aria-label="上一张照片"
+            hidden
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
+          <button
+            class="story-dialog__nav story-dialog__nav--next"
+            type="button"
+            data-dialog-next
+            aria-label="下一张照片"
+            hidden
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+          <span class="story-dialog__caption" data-dialog-caption hidden></span>
+          <span class="story-dialog__count" data-dialog-count aria-live="polite" hidden></span>
+        </div>
+        <div class="story-dialog__thumbs" data-dialog-thumbs hidden></div>
+      </div>
+      <div class="story-dialog__body">
+        <button class="story-dialog__close" type="button" data-dialog-close>
+          <span aria-hidden="true">×</span>
+          <span>CLOSE</span>
+        </button>
+        <p class="story-dialog__meta" data-dialog-meta></p>
+        <h2 id="story-dialog-title" data-dialog-title></h2>
+        <div class="story-dialog__text" data-dialog-text></div>
+        <div class="story-dialog__foot">
+          <span data-dialog-kicker>SCENERY NOTE</span>
+          <span data-dialog-coords></span>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./content.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
