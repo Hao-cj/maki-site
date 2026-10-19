@@ -294,13 +294,27 @@ window.SITE_CONTENT = {
           note: "柳州的味道很直接。酸、辣、鲜一起上来，吃完再沿江走一段。",
           items: [
             {
-              title: "螺蛳粉",
+              title: "柳州螺蛳粉",
               place: "柳州",
               type: "米粉",
               near: "五星步行街",
-              image: "./assets/images/food-noodles.jpg",
-              alt: "螺蛳粉的示意图片（占位）",
-              note: "汤头酸辣，米粉滑，酸笋的味道先冲上来，后面是螺蛳汤的回甘。吃完一身汗，刚好去江边吹风。",
+              image: "./assets/images/liuzhou-luosifen-01.jpg",
+              alt: "三碗柳州螺蛳粉，配炸蛋、腐竹和青菜",
+              gallery: [
+                {
+                  image: "./assets/images/liuzhou-luosifen-01.jpg",
+                  thumb: "./assets/images/liuzhou-luosifen-01-thumb.jpg",
+                  alt: "三碗柳州螺蛳粉，配炸蛋、腐竹和青菜",
+                  caption: "三个人，三碗粉"
+                },
+                {
+                  image: "./assets/images/liuzhou-luosifen-02.jpg",
+                  thumb: "./assets/images/liuzhou-luosifen-02-thumb.jpg",
+                  alt: "柳州螺蛳粉配炸蛋、腐竹、鸭脚和一碗黑色甜品",
+                  caption: "加蛋，也加一份甜品"
+                }
+              ],
+              note: "汤头酸辣，米粉滑，酸笋的味道先冲上来，后面是螺蛳汤的回甘。这次加了炸蛋和腐竹，旁边再配一碗冰凉的甜品，辣和甜刚好打了个平手。",
               repeat: "还会再吃"
             },
             {
