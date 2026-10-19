@@ -120,6 +120,7 @@ window.SITE_CONTENT = {
         date: "2026.08",
         coords: "24°N · 109°E",
         heroImage: "./assets/images/liuzhou-sunset.jpg",
+        foodTitle: "螺蛳粉圣都",
         intro:
           "柳州把山水放在城市里。白天沿江看山，晚上去五星街为一碗螺蛳粉排队。",
         spots: [

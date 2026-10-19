@@ -415,6 +415,7 @@ function renderPlaceDetail() {
   const food = destination.food || {};
   const foodItems = getDestinationFoodItems(destination);
   const hasFood = foodItems.length > 0;
+  const foodTitle = destination.foodTitle || "美食";
   if (!hasFood) activeDestinationView = "scenery";
   const sceneryActive = activeDestinationView !== "food";
   const foodActive = hasFood && activeDestinationView === "food";
@@ -540,7 +541,7 @@ function renderPlaceDetail() {
           hasFood
             ? `
               <button
-                class="place-tab${foodActive ? " is-active" : ""}"
+                class="place-tab${foodActive ? " is-active" : ""}${foodTitle.length > 3 ? " place-tab--long" : ""}"
                 type="button"
                 role="tab"
                 id="place-tab-food"
@@ -550,7 +551,7 @@ function renderPlaceDetail() {
                 data-place-view="food"
               >
                 <span class="place-tab__index">02</span>
-                <span class="place-tab__label">美食<small>TASTE · ${formatCount(foodItems.length)}</small></span>
+                <span class="place-tab__label">${escapeHtml(foodTitle)}<small>TASTE · ${formatCount(foodItems.length)}</small></span>
                 <span class="place-tab__arrow" aria-hidden="true">↘</span>
               </button>
             `
@@ -584,7 +585,7 @@ function renderPlaceDetail() {
                 <div class="place-food__head">
                   <div>
                     <span class="place-food__label">02 / TASTE</span>
-                    <h4>美食</h4>
+                    <h4>${escapeHtml(foodTitle)}</h4>
                   </div>
                   <p>${escapeHtml(food.note || "")}</p>
                 </div>

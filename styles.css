@@ -4696,6 +4696,11 @@ figure {
     font-size: 1.25rem;
   }
 
+  .place-tab--long .place-tab__label {
+    font-size: 1.12rem;
+    white-space: nowrap;
+  }
+
   .place-tab__label small {
     font-size: 0.39rem;
   }
