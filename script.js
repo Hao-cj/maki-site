@@ -16,7 +16,7 @@ const destinationStories = destinations.flatMap((destination) =>
       spot.name && spot.name !== destination.name
         ? `${destination.name} · ${spot.name}`
         : destination.region || destination.name,
-    date: destination.date,
+    date: spot.scenery?.date || destination.date,
     coords: destination.coords,
     image: spot.scenery?.image,
     alt: spot.scenery?.alt || spot.name || destination.name,
@@ -29,8 +29,13 @@ const foodStories = destinations.flatMap((destination) =>
     const gallery = Array.isArray(item.gallery)
       ? item.gallery.filter((galleryItem) => galleryItem?.image)
       : [];
-
-    if (gallery.length < 2) return [];
+    const image = item.image || gallery[0]?.image;
+    const detailGallery =
+      gallery.length > 0
+        ? gallery
+        : image
+          ? [{ image, alt: item.alt || item.title, caption: "" }]
+          : [];
 
     return [
       {
@@ -39,17 +44,45 @@ const foodStories = destinations.flatMap((destination) =>
         location: `${destination.name} · 美食`,
         date: destination.date,
         coords: destination.coords,
-        image: gallery[0].image,
-        alt: gallery[0].alt || item.alt || item.title,
-        gallery,
+        image,
+        alt: item.alt || gallery[0]?.alt || item.title,
+        gallery: detailGallery,
         paragraphs: item.note ? [item.note] : [],
         kind: "food"
       }
     ];
   })
 );
+const photoExhibitionStory = fragments.length
+  ? {
+      id: "photo-exhibition",
+      title: "光的余温",
+      location: "PHOTO EXHIBITION",
+      date: "07 FRAMES · 黄昏之后",
+      coords: "AN EXHIBITION IN STILLNESS",
+      image: fragments[0].image,
+      alt: fragments[0].alt || fragments[0].caption || "",
+      gallery: fragments
+        .filter((fragment) => fragment?.image)
+        .map((fragment) => ({
+          title: fragment.caption || "",
+          image: fragment.image,
+          alt: fragment.alt || fragment.caption || "",
+          caption: fragment.caption || ""
+        })),
+      paragraphs: [
+        "日落以后，光没有立刻离开。它在芦苇、屋檐和水面上多停了一会儿，也留在那些还不想回家的人身上。"
+      ],
+      kind: "photo"
+    }
+  : null;
 const storyLookup = Object.fromEntries(
-  [...stories, ...destinationStories, ...foodStories].map((story) => [story.id, story])
+  [
+    ...stories,
+    ...destinationStories,
+    ...foodStories,
+    ...(photoExhibitionStory ? [photoExhibitionStory] : [])
+  ].map((story) => [story.id, story])
 );
 
 const root = document.documentElement;
@@ -299,23 +332,46 @@ function renderTravel() {
   }
 
   if (fragmentGrid) {
-    const layoutClasses = ["one", "two", "three"];
+    const layoutClasses = ["lead", "stack-a", "stack-b", "pair", "pair", "pair", "pair"];
     fragmentGrid.innerHTML = fragments
       .map(
         (fragment, index) => `
+          ${
+            fragment.chapter
+              ? `<div class="fragment-chapter" data-reveal>
+                  <span>${escapeHtml(fragment.chapter)}</span>
+                  <i aria-hidden="true"></i>
+                </div>`
+              : ""
+          }
           <figure
-            class="fragment fragment--${layoutClasses[index % layoutClasses.length]}"
+            class="fragment fragment--${layoutClasses[index] || "pair"}"
+            data-story-id="photo-exhibition"
+            data-story-start="${index}"
+            tabindex="0"
+            role="button"
+            aria-label="查看摄影作品 ${index + 1}：${escapeHtml(fragment.caption || "")}"
             data-reveal
           >
             <div class="fragment__image">
-              <img
-                src="${escapeHtml(fragment.image)}"
-                alt="${escapeHtml(fragment.alt || fragment.caption)}"
-                loading="lazy"
-              />
+              <picture>
+                ${
+                  fragment.preview
+                    ? `<source srcset="${escapeHtml(fragment.preview)}" type="image/webp" />`
+                    : ""
+                }
+                <img
+                  src="${escapeHtml(fragment.image)}"
+                  alt="${escapeHtml(fragment.alt || fragment.caption)}"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
             <figcaption>
-              <span>${escapeHtml(fragment.caption || "")}</span>
+              <span>${escapeHtml(
+                `${String(index + 1).padStart(2, "0")} / ${fragment.caption || ""}`
+              )}</span>
               <span>${escapeHtml(fragment.location || "")}</span>
             </figcaption>
           </figure>
@@ -603,8 +659,10 @@ function renderPlaceDetail() {
 
                       return `
                         <article
-                          class="place-taste${isFeature ? " place-taste--feature" : ""}${hasGallery ? " place-taste--gallery" : ""}"
-                          ${hasGallery ? `data-story-id="${escapeHtml(foodStoryId(destination, foodIndex))}" tabindex="0" aria-label="查看${escapeHtml(item.title)}的相册"` : ""}
+                          class="place-taste place-taste--interactive${isFeature ? " place-taste--feature" : ""}"
+                          data-story-id="${escapeHtml(foodStoryId(destination, foodIndex))}"
+                          tabindex="0"
+                          aria-label="展开${escapeHtml(item.title)}详情"
                         >
                           <div class="place-taste__image">
                             <img
@@ -628,16 +686,10 @@ function renderPlaceDetail() {
                                 ? `<span class="place-taste__repeat">${escapeHtml(item.repeat)}</span>`
                                 : ""
                             }
-                            ${
-                              hasGallery
-                                ? `
-                                  <button class="place-taste__open" type="button" data-open-story>
-                                    <span>翻开这顿的味道</span>
-                                    <span aria-hidden="true">↗</span>
-                                  </button>
-                                `
-                                : ""
-                            }
+                            <button class="place-taste__open" type="button" data-open-story>
+                              <span>${hasGallery ? `翻开这顿的味道 · ${formatCount(galleryCount)} 张` : "展开这顿的味道"}</span>
+                              <span aria-hidden="true">↗</span>
+                            </button>
                           </div>
                         </article>
                       `;
@@ -1204,6 +1256,10 @@ function renderDialogGallery({ immediate = false } = {}) {
     dialogCount.textContent = `${formatCount(dialogGalleryIndex + 1)} / ${formatCount(dialogGallery.length)}`;
   }
 
+  if (dialogTitle && item.title) {
+    dialogTitle.textContent = item.title;
+  }
+
   if (dialogCaption) {
     dialogCaption.textContent = item.caption || "";
     dialogCaption.hidden = !item.caption;
@@ -1230,9 +1286,9 @@ function setDialogGalleryIndex(index, options = {}) {
   renderDialogGallery(options);
 }
 
-function buildDialogGallery(story) {
+function buildDialogGallery(story, startIndex = 0) {
   dialogGallery = getStoryGallery(story);
-  dialogGalleryIndex = 0;
+  dialogGalleryIndex = Math.min(Math.max(Number(startIndex) || 0, 0), dialogGallery.length - 1);
   const hasMultiple = dialogGallery.length > 1;
 
   if (dialogPrev) dialogPrev.hidden = !hasMultiple;
@@ -1268,11 +1324,11 @@ function buildDialogGallery(story) {
   }
 
   resetDialogImages();
-  preloadGalleryItem(dialogGallery[0]);
+  preloadGalleryItem(dialogGallery[dialogGalleryIndex]);
   renderDialogGallery({ immediate: true });
 }
 
-function openStory(storyId) {
+function openStory(storyId, startIndex = 0) {
   const story = storyLookup[storyId];
   if (!story || !dialog) return;
 
@@ -1280,10 +1336,16 @@ function openStory(storyId) {
   dialogMeta.textContent = `${story.location} / ${story.date}`;
   dialogCoords.textContent = story.coords || "";
   if (dialogKicker) {
-    dialogKicker.textContent = story.kind === "food" ? "TASTE NOTE" : "SCENERY NOTE";
+    dialogKicker.textContent =
+      story.kind === "food"
+        ? "TASTE NOTE"
+        : story.kind === "photo"
+          ? "PHOTO WORK"
+          : "SCENERY NOTE";
   }
+  dialog.classList.toggle("is-photo", story.kind === "photo");
   dialogText.innerHTML = (story.paragraphs || []).map((paragraph) => `<p>${paragraph}</p>`).join("");
-  buildDialogGallery(story);
+  buildDialogGallery(story, startIndex);
   dialog.showModal();
   document.body.classList.add("dialog-open");
 }
@@ -1298,13 +1360,13 @@ document.addEventListener("click", (event) => {
   if (button) {
     event.stopPropagation();
     const card = button.closest("[data-story-id]");
-    if (card) openStory(card.dataset.storyId);
+    if (card) openStory(card.dataset.storyId, Number(card.dataset.storyStart || 0));
     return;
   }
 
   const card = event.target.closest("[data-story-id]");
   if (!card || track?.dataset.suppressClick === "true") return;
-  openStory(card.dataset.storyId);
+  openStory(card.dataset.storyId, Number(card.dataset.storyStart || 0));
 });
 
 document.addEventListener("keydown", (event) => {
@@ -1319,7 +1381,7 @@ document.addEventListener("keydown", (event) => {
   if (!card || event.target !== card) return;
   if (event.key !== "Enter" && event.key !== " ") return;
   event.preventDefault();
-  openStory(card.dataset.storyId);
+  openStory(card.dataset.storyId, Number(card.dataset.storyStart || 0));
 });
 
 dialogClose?.addEventListener("click", closeStory);

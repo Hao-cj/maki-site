@@ -4,10 +4,10 @@ window.SITE_CONTENT = {
       label: "旅游",
       english: "TRAVEL JOURNAL",
       description: "按城市整理每一段旅程，点进去看景点与城市味道。",
-      meta: "04 DESTINATIONS",
+      meta: "06 DESTINATIONS",
       href: "./travel.html",
-      image: "./assets/images/placeholder-water.svg",
-      imageAlt: "柳州、济南、苏州与南京旅行笔记封面",
+      image: "./assets/images/taian-mount-tai-08.jpg",
+      imageAlt: "泰山日出的旅行笔记封面",
       previewIndex: "01",
       previewCaption: "TRAVEL JOURNAL"
     },
@@ -106,9 +106,9 @@ window.SITE_CONTENT = {
         "不是每个景点都要配一顿饭，有就记下，没有也不硬凑。只记录那些愿意再看一眼、再吃一次的瞬间。"
       ],
       stats: [
-        { value: "03", label: "座城市" },
-        { value: "07", label: "段景色" },
-        { value: "06", label: "次回味" }
+        { value: "06", label: "座城市" },
+        { value: "13", label: "段景色" },
+        { value: "03", label: "次回味" }
       ]
     },
     destinations: [
@@ -117,7 +117,7 @@ window.SITE_CONTENT = {
         number: "01",
         name: "柳州",
         region: "广西 · 中国",
-        date: "2026.08",
+        date: "2026.09.26—10.01",
         coords: "24°N · 109°E",
         heroImage: "./assets/images/liuzhou-sunset.jpg",
         foodTitle: "螺蛳粉圣都",
@@ -354,11 +354,73 @@ window.SITE_CONTENT = {
         }
       },
       {
-        id: "jinan",
+        id: "shanghai",
         number: "02",
+        name: "上海",
+        region: "上海 · 中国",
+        date: "2026.09.25",
+        coords: "31°N · 121°E",
+        heroImage: "./assets/images/shanghai-pudong-museum-01.jpg",
+        intro:
+          "把下午留给浦东美术馆：安静的小画、一整间发亮的蓝，还有窗边刚好赶上的落日。",
+        spots: [
+          {
+            id: "pudong-museum",
+            name: "浦东美术馆",
+            scenery: {
+              title: "蓝色房间里，身体像在漂浮",
+              image: "./assets/images/shanghai-pudong-museum-01.jpg",
+              alt: "浦东美术馆蓝色展厅里悬挂的两件大型装置，一件覆着白色圆点，一件呈黑色剪影",
+              excerpt: "看过几幅安静的小画，再走进一整间发亮的蓝，最后在窗边等一场落日。",
+              note: "美术馆 / 展览 / 黄昏",
+              date: "2026.09.25",
+              gallery: [
+                {
+                  image: "./assets/images/shanghai-pudong-museum-01.jpg",
+                  thumb: "./assets/images/shanghai-pudong-museum-01-thumb.jpg",
+                  alt: "浦东美术馆蓝色展厅里悬挂的两件大型装置，一件覆着白色圆点，一件呈黑色剪影",
+                  caption: "一整间发亮的蓝"
+                },
+                {
+                  image: "./assets/images/shanghai-pudong-museum-02.jpg",
+                  thumb: "./assets/images/shanghai-pudong-museum-02-thumb.jpg",
+                  alt: "浦东美术馆展厅里一幅装在金色画框中的风景油画",
+                  caption: "金色画框里的风景"
+                },
+                {
+                  image: "./assets/images/shanghai-pudong-museum-03.jpg",
+                  thumb: "./assets/images/shanghai-pudong-museum-03-thumb.jpg",
+                  alt: "浦东美术馆展厅里两只陶罐与一块黄色布料的静物油画",
+                  caption: "两只陶罐与一块黄布"
+                },
+                {
+                  image: "./assets/images/shanghai-pudong-museum-04.jpg",
+                  thumb: "./assets/images/shanghai-pudong-museum-04-thumb.jpg",
+                  alt: "浦东美术馆展厅里装在厚重黑色雕花画框中的黑白静物画",
+                  caption: "黑框里的静物"
+                },
+                {
+                  image: "./assets/images/shanghai-pudong-museum-05.jpg",
+                  thumb: "./assets/images/shanghai-pudong-museum-05-thumb.jpg",
+                  alt: "从浦东美术馆窗前望向黄浦江对岸，落日落在城市天际线后",
+                  caption: "窗边的落日"
+                }
+              ],
+              paragraphs: [
+                "浦东美术馆的展厅留了很多白墙，几幅画安安静静地挂着。远处的风景、两只陶罐和一块黄布，颜色都不多，却让人愿意把步子放慢。",
+                "另一间展厅忽然变成整片蓝色。两件巨大的身体悬在半空，一件覆着细密圆点，一件沉成黑色剪影，脚下也铺满流动的纹路。<em>像走进一幅还没干的画里</em>。",
+                "看完展，太阳正落到黄浦江对岸的建筑后面。玻璃映着室内，窗外是城市，脚边还留着走累的痕迹。<em>艺术和日常只隔着一层窗</em>。"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        id: "jinan",
+        number: "03",
         name: "济南",
         region: "山东 · 中国",
-        date: "2026.06",
+        date: "2026.07.04—05",
         coords: "36°N · 117°E",
         intro: "济南的好，藏在一泉一街之间。走累了，就坐下来吃一块把子肉。",
         spots: [
@@ -367,162 +429,422 @@ window.SITE_CONTENT = {
             name: "趵突泉",
             scenery: {
               title: "泉水一直在往上走",
-              image: "./assets/images/placeholder-water.svg",
-              alt: "趵突泉泉水的占位插画（待替换为实拍）",
+              image: "./assets/images/jinan-baotu-spring-01.jpg",
+              alt: "趵突泉清澈的泉池、游动的锦鲤与右侧跌落的泉水",
               excerpt: "池水清得发亮，泉眼不停地把城市往上托。",
               note: "泉水 / 上午 / 老城",
+              gallery: [
+                {
+                  image: "./assets/images/jinan-baotu-spring-01.jpg",
+                  thumb: "./assets/images/jinan-baotu-spring-01-thumb.jpg",
+                  alt: "趵突泉清澈的泉池、游动的锦鲤与右侧跌落的泉水",
+                  caption: "泉池与锦鲤"
+                },
+                {
+                  image: "./assets/images/jinan-baotu-spring-06.jpg",
+                  thumb: "./assets/images/jinan-baotu-spring-06-thumb.jpg",
+                  alt: "趵突泉水面泛起的涟漪与游动的红色锦鲤",
+                  caption: "涟漪与红鲤"
+                },
+                {
+                  image: "./assets/images/jinan-baotu-spring-02.jpg",
+                  thumb: "./assets/images/jinan-baotu-spring-02-thumb.jpg",
+                  alt: "趵突泉清池里游动的鱼群与右侧落下的泉水",
+                  caption: "清池里的鱼影"
+                },
+                {
+                  image: "./assets/images/jinan-baotu-spring-03.jpg",
+                  thumb: "./assets/images/jinan-baotu-spring-03-thumb.jpg",
+                  alt: "趵突泉的泉水越过石阶，形成层层白色的水花",
+                  caption: "泉水越过石阶"
+                },
+                {
+                  image: "./assets/images/jinan-baotu-spring-04.jpg",
+                  thumb: "./assets/images/jinan-baotu-spring-04-thumb.jpg",
+                  alt: "趵突泉泉池与石岸间的流水、树影和游人",
+                  caption: "泉池与流水"
+                },
+                {
+                  image: "./assets/images/jinan-baotu-spring-05.jpg",
+                  thumb: "./assets/images/jinan-baotu-spring-05-thumb.jpg",
+                  alt: "趵突泉深色池水中游动的红色锦鲤与远处的小瀑布",
+                  caption: "深水里的红鲤"
+                }
+              ],
               paragraphs: [
                 "到趵突泉的时候，池边已经站了不少人。大家都不说话，只看水。",
-                "泉眼一股一股往上翻，水声不大，却有一种很稳定的力量。那一刻我明白了，<em>济南的底气是从地下慢慢涌上来的</em>。"
+                "泉眼一股一股往上翻，水声不大，却有一种很稳定的力量。那一刻我明白了，<em>济南的底气是从地下慢慢涌上来的</em>。",
+                "池底的石纹和游动的锦鲤都看得清，水光一晃，红色就散开了。站在岸边，连时间也像被水流放慢了一拍。"
               ]
             }
           },
           {
-            id: "qushuiting",
-            name: "曲水亭街",
+            id: "wulongtan",
+            name: "五龙潭公园",
             scenery: {
-              title: "沿着水走，就会走到生活里",
-              image: "./assets/images/placeholder-street.svg",
-              alt: "曲水亭街水巷的占位插画（待替换为实拍）",
-              excerpt: "一边是水，一边是人家，步子自然就慢下来。",
-              note: "老街 / 午后 / 垂柳",
+              title: "五条石龙，把泉水吐进潭里",
+              image: "./assets/images/jinan-wulongtan-01.jpg",
+              alt: "五龙潭公园的碧绿泉池、临水楼阁与远处城市高楼",
+              excerpt: "潭水绿得发亮，石龙吐出的水线把老城与高楼连在一起。",
+              note: "泉池 / 石龙 / 城市倒影",
+              gallery: [
+                {
+                  image: "./assets/images/jinan-wulongtan-01.jpg",
+                  thumb: "./assets/images/jinan-wulongtan-01-thumb.jpg",
+                  alt: "五龙潭公园的碧绿泉池、临水楼阁与远处城市高楼",
+                  caption: "老城与高楼的倒影"
+                },
+                {
+                  image: "./assets/images/jinan-wulongtan-02.jpg",
+                  thumb: "./assets/images/jinan-wulongtan-02-thumb.jpg",
+                  alt: "五龙潭公园的临水楼阁、柳树与碧绿潭水中的倒影",
+                  caption: "潭边的楼阁"
+                },
+                {
+                  image: "./assets/images/jinan-wulongtan-03.jpg",
+                  thumb: "./assets/images/jinan-wulongtan-03-thumb.jpg",
+                  alt: "透过假山石洞望向五龙潭的临水楼阁与远处高楼",
+                  caption: "从石缝里看五龙潭"
+                },
+                {
+                  image: "./assets/images/jinan-wulongtan-04.jpg",
+                  thumb: "./assets/images/jinan-wulongtan-04-thumb.jpg",
+                  alt: "五龙潭公园并列的石龙头向池中喷水",
+                  caption: "五龙吐水"
+                }
+              ],
               paragraphs: [
-                "曲水亭街适合没有目的地地走。水在脚边，柳枝垂下来，旧房子的墙被岁月磨得很软。",
-                "有人在门口洗菜，有人坐在河边喝茶。旅行走到这里，<em>景点和日常之间那条线忽然就消失了</em>。"
+                "五龙潭公园比想象的安静。绕过假山和石桥，五座石龙头一起向池中吐水，水线落进潭里，只留下细碎的声响。",
+                "再往池边站一会儿，临水楼阁、垂柳和远处的高楼都落在同一片水面上。<em>济南的老城与今天，在这里共用一面镜子</em>。"
+              ]
+            }
+          },
+          {
+            id: "daminghu",
+            name: "大明湖",
+            scenery: {
+              title: "从牌坊走进去，就是大明湖的夏天",
+              image: "./assets/images/jinan-daminghu-01.jpg",
+              alt: "济南大明湖入口牌坊，红色立柱、彩绘屋檐与垂柳",
+              excerpt: "从牌坊走进湖边，荷叶、柳荫和一只坐在树下的黑猫，组成了大明湖的夏天。",
+              note: "湖岸 / 午后 / 荷叶",
+              gallery: [
+                {
+                  image: "./assets/images/jinan-daminghu-01.jpg",
+                  thumb: "./assets/images/jinan-daminghu-01-thumb.jpg",
+                  alt: "济南大明湖入口牌坊，红色立柱、彩绘屋檐与垂柳",
+                  caption: "大明湖牌坊"
+                },
+                {
+                  image: "./assets/images/jinan-daminghu-02.jpg",
+                  thumb: "./assets/images/jinan-daminghu-02-thumb.jpg",
+                  alt: "大明湖岸边层层叠叠的绿色荷叶与一朵粉色荷花",
+                  caption: "一池荷叶"
+                },
+                {
+                  image: "./assets/images/jinan-daminghu-03.jpg",
+                  thumb: "./assets/images/jinan-daminghu-03-thumb.jpg",
+                  alt: "大明湖景区内的大型花神装置，头饰由蓝紫色花朵组成",
+                  caption: "湖边的花神装置"
+                },
+                {
+                  image: "./assets/images/jinan-daminghu-04.jpg",
+                  thumb: "./assets/images/jinan-daminghu-04-thumb.jpg",
+                  alt: "一只黑猫安静地坐在大明湖公园的大树下",
+                  caption: "树荫下的小黑猫"
+                }
+              ],
+              paragraphs: [
+                "从写着“大明湖”的牌坊走进去，柳枝先垂到眼前。风把湖面分成一层层细小的光，夏天的热气也像被压低了一点。",
+                "荷叶在岸边铺得很满，花神装置立在树影之间，颜色比湖水还亮。绕湖走累了，又遇见一只安静坐在树下的黑猫。<em>大明湖的好，不只在湖本身，也在这些慢下来的小事里</em>。"
+              ]
+            }
+          },
+          {
+            id: "shandong-museum",
+            name: "山东博物馆",
+            scenery: {
+              title: "抬头，看见会发光的穹顶",
+              image: "./assets/images/jinan-shandong-museum-01.jpg",
+              alt: "山东博物馆灰色建筑立面、金色馆名与顶部圆形穹顶",
+              excerpt: "正门很安静，走进大厅抬头，圆形穹顶像把一片森林翻到了天上。",
+              note: "建筑 / 穹顶 / 青铜器",
+              gallery: [
+                {
+                  image: "./assets/images/jinan-shandong-museum-01.jpg",
+                  thumb: "./assets/images/jinan-shandong-museum-01-thumb.jpg",
+                  alt: "山东博物馆灰色建筑立面、金色馆名与顶部圆形穹顶",
+                  caption: "山东博物馆正门"
+                },
+                {
+                  image: "./assets/images/jinan-shandong-museum-02.jpg",
+                  thumb: "./assets/images/jinan-shandong-museum-02-thumb.jpg",
+                  alt: "山东博物馆大厅中央巨大的圆形穹顶与一圈圈灯光",
+                  caption: "会发光的穹顶"
+                },
+                {
+                  image: "./assets/images/jinan-shandong-museum-03.jpg",
+                  thumb: "./assets/images/jinan-shandong-museum-03-thumb.jpg",
+                  alt: "山东博物馆展出的商代亚醜钺，青铜器表面有夸张的人面纹",
+                  caption: "亚醜钺"
+                }
+              ],
+              paragraphs: [
+                "山东博物馆的正门很安静，灰色立面和金色馆名在蓝天下显得很克制。真正让人停下来的地方，要走进大厅再抬头。",
+                "圆形穹顶像一片被翻到天上的森林，灯光一圈圈铺开，台阶上坐满了休息的人。<em>博物馆不只收着过去，也把一座城市的日常收进了同一片光里</em>。",
+                "展厅里的亚醜钺保留着夸张的面孔，隔着玻璃看，还是会被那张咧开的嘴逗笑。"
+              ]
+            }
+          },
+        ]
+      },
+      {
+        id: "taian",
+        number: "04",
+        name: "泰安",
+        region: "山东 · 中国",
+        date: "2026.07.02—03",
+        coords: "36°N · 117°E",
+        heroImage: "./assets/images/taian-mount-tai-08.jpg",
+        intro: "夜里从岱宗坊出发，沿石阶一路向上，在泰山顶等天亮。",
+        spots: [
+          {
+            id: "mount-tai",
+            name: "泰山",
+            scenery: {
+              title: "爬一整夜，去等一场日出",
+              image: "./assets/images/taian-mount-tai-08.jpg",
+              alt: "泰山山顶日出，太阳从橘粉色云海中升起，游客在观景处拍照",
+              excerpt: "夜色里从岱宗坊出发，沿石阶爬到山顶，在人群和风里等太阳从云海升起。",
+              note: "夜爬 / 云海 / 日出",
+              gallery: [
+                {
+                  image: "./assets/images/taian-mount-tai-08.jpg",
+                  thumb: "./assets/images/taian-mount-tai-08-thumb.jpg",
+                  alt: "泰山山顶日出，太阳从橘粉色云海中升起，游客在观景处拍照",
+                  caption: "泰山日出"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-01.jpg",
+                  thumb: "./assets/images/taian-mount-tai-01-thumb.jpg",
+                  alt: "夜色中被灯光照亮的岱宗坊石牌坊",
+                  caption: "夜色里的岱宗坊"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-02.jpg",
+                  thumb: "./assets/images/taian-mount-tai-02-thumb.jpg",
+                  alt: "泰山登山道上的天阶石坊与红色楹联",
+                  caption: "天阶"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-03.jpg",
+                  thumb: "./assets/images/taian-mount-tai-03-thumb.jpg",
+                  alt: "从泰山山脊俯瞰远处城市的灯火",
+                  caption: "山下的灯火"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-04.jpg",
+                  thumb: "./assets/images/taian-mount-tai-04-thumb.jpg",
+                  alt: "清晨的泰山山顶，人群聚集在亮灯的观景建筑前等待日出",
+                  caption: "山顶的清晨"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-05.jpg",
+                  thumb: "./assets/images/taian-mount-tai-05-thumb.jpg",
+                  alt: "泰山日出前，紫粉色云层覆盖天空",
+                  caption: "天亮之前"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-06.jpg",
+                  thumb: "./assets/images/taian-mount-tai-06-thumb.jpg",
+                  alt: "泰山日出前，红霞漫过山脊，人群在山顶形成剪影",
+                  caption: "红霞漫过山脊"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-07.jpg",
+                  thumb: "./assets/images/taian-mount-tai-07-thumb.jpg",
+                  alt: "泰山山顶被粉红色朝霞覆盖，游客举着手机拍照",
+                  caption: "天空烧起来了"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-09.jpg",
+                  thumb: "./assets/images/taian-mount-tai-09-thumb.jpg",
+                  alt: "泰山山崖上的“天下第一山”红色石刻",
+                  caption: "天下第一山"
+                },
+                {
+                  image: "./assets/images/taian-mount-tai-10.jpg",
+                  thumb: "./assets/images/taian-mount-tai-10-thumb.jpg",
+                  alt: "泰山山泉从刻有文字的石壁间流下",
+                  caption: "石刻与山泉"
+                }
+              ],
+              paragraphs: [
+                "晚上十点多，岱宗坊的灯还亮着。我们背着包从这里出发，街上的车声慢慢落在身后。",
+                "石阶一段接一段，夜色把山体压成黑色，只剩手电和远处城市的灯。到了山顶，所有人都裹着外套，在风里等天亮。",
+                "天边先是一条很细的蓝，随后被云染成粉红。太阳从云海里露出来的时候，人群一下安静了，只剩快门声。<em>爬了一整夜，好像就是为了这几分钟</em>。",
+                "下山时才看清路边的石刻和泉水。山不只是山顶的日出，也是石头上那些被时间留下的字。"
               ]
             }
           }
-        ],
-        food: {
-          note: "济南的饭桌不花哨，胜在实在。一块肉、一碗甜沫，就能把一天安顿好。",
-          items: [
-            {
-              title: "把子肉",
-              place: "老城",
-              type: "家常",
-              near: "趵突泉",
-              image: "./assets/images/food-hero.jpg",
-              alt: "把子肉与米饭的示意图片（占位）",
-              note: "肉炖得酥，酱香里带一点甜。配一碗白饭，再浇一点汤汁，是很踏实的一顿。",
-              repeat: "配米饭"
-            },
-            {
-              title: "甜沫",
-              place: "济南",
-              type: "早餐",
-              image: "./assets/images/food-breakfast.jpg",
-              alt: "甜沫与早餐的示意图片（占位）",
-              note: "名字叫甜，入口却是咸香的。小米面、花生、豆腐皮和粉条煮在一起，早起喝一碗，胃里很暖。",
-              repeat: "早起再喝"
-            }
-          ]
-        }
+        ]
       },
       {
         id: "suzhou",
-        number: "03",
+        number: "05",
         name: "苏州",
         region: "江苏 · 中国",
-        date: "2026.04",
+        date: "2026.07.27—28",
         coords: "31°N · 120°E",
-        intro: "苏州适合慢慢走。园林看一扇窗，水巷听一段评弹，再吃一碗面。",
+        intro: "苏州适合慢慢走。先看矿坑湖的孔雀蓝，再去虎丘看树影与塔影。",
         spots: [
           {
-            id: "zhuozhengyuan",
-            name: "拙政园",
+            id: "emerald-lake",
+            name: "翡翠湖",
             scenery: {
-              title: "一扇窗里，四季都在",
-              image: "./assets/images/placeholder-water.svg",
-              alt: "拙政园园林水景的占位插画（待替换为实拍）",
-              excerpt: "园子不大，走进去却总觉得还有下一重景。",
-              note: "园林 / 清晨 / 花窗",
+              title: "矿坑里，藏着一整片孔雀蓝",
+              image: "./assets/images/suzhou-emerald-lake-01.jpg",
+              alt: "苏州翡翠湖碧绿湖面、白色翡翠湖标志与矿坑岩壁",
+              excerpt: "岩壁把湖围在中间，水从浅滩的青绿一直过渡到深处的孔雀蓝。",
+              note: "矿坑湖 / 午后 / 岩壁",
+              date: "2026.07.27—28",
+              gallery: [
+                {
+                  image: "./assets/images/suzhou-emerald-lake-01.jpg",
+                  thumb: "./assets/images/suzhou-emerald-lake-01-thumb.jpg",
+                  alt: "苏州翡翠湖碧绿湖面、白色翡翠湖标志与矿坑岩壁",
+                  caption: "翡翠湖"
+                },
+                {
+                  image: "./assets/images/suzhou-emerald-lake-02.jpg",
+                  thumb: "./assets/images/suzhou-emerald-lake-02-thumb.jpg",
+                  alt: "翡翠湖浅滩透明的青绿色湖水与远处矿山岩壁",
+                  caption: "一眼见底的蓝"
+                },
+                {
+                  image: "./assets/images/suzhou-emerald-lake-03.jpg",
+                  thumb: "./assets/images/suzhou-emerald-lake-03-thumb.jpg",
+                  alt: "翡翠湖岸边树枝、碧绿湖水与山崖上的白色栏杆",
+                  caption: "矿坑边的白栏杆"
+                },
+                {
+                  image: "./assets/images/suzhou-emerald-lake-04.jpg",
+                  thumb: "./assets/images/suzhou-emerald-lake-04-thumb.jpg",
+                  alt: "翡翠湖清澈水面下的岩石与天空倒影",
+                  caption: "水下的石头"
+                },
+                {
+                  image: "./assets/images/suzhou-emerald-lake-05.jpg",
+                  thumb: "./assets/images/suzhou-emerald-lake-05-thumb.jpg",
+                  alt: "翡翠湖岸边岩壁上的绿色翡翠湖石刻",
+                  caption: "翡翠湖石刻"
+                },
+                {
+                  image: "./assets/images/suzhou-emerald-lake-06.jpg",
+                  thumb: "./assets/images/suzhou-emerald-lake-06-thumb.jpg",
+                  alt: "一只黑天鹅停在翡翠湖岸边的岩石与水浅滩之间",
+                  caption: "岩石间的黑天鹅"
+                },
+                {
+                  image: "./assets/images/suzhou-emerald-lake-07.jpg",
+                  thumb: "./assets/images/suzhou-emerald-lake-07-thumb.jpg",
+                  alt: "翡翠湖公园白墙上的黑色文字“愿你我 不被时间催促 不被世界定义”",
+                  caption: "写在墙上的话"
+                }
+              ],
               paragraphs: [
-                "拙政园要早去。人少的时候，窗框、白墙和水面会自己组成一幅画。",
-                "我在一扇花窗前停了很久。框里是竹影，框外是游廊，走两步又是另一种景。苏州的园林不是让你看完，而是<em>让你舍不得走快</em>。"
+                "走进翡翠湖的时候，先看到的是岩壁。石头一层一层围住水面，湖像被留在了矿坑的底部。",
+                "岸边的水很浅，能看见底下的石头；再往中间走，颜色忽然变成很浓的孔雀蓝。<em>同是一片水，深浅之间像换了好几种颜色</em>。",
+                "黑天鹅停在岩石边，白色栏杆挂在高处的山崖上。离开前，我们在白墙前停了停：<em>“愿你我，不被时间催促，不被世界定义。”</em>"
               ]
             }
           },
           {
-            id: "pingjiang",
-            name: "平江路",
+            id: "huqiu",
+            name: "虎丘",
             scenery: {
-              title: "水巷边的慢生活",
-              image: "./assets/images/placeholder-street.svg",
-              alt: "平江路水巷的占位插画（待替换为实拍）",
-              excerpt: "河在左手，老房子在右手，走累了就找一家小店坐下。",
-              note: "水巷 / 傍晚 / 评弹",
+              title: "树影收住暑气，塔影探出云端",
+              image: "./assets/images/suzhou-huqiu-01.jpg",
+              alt: "虎丘林间的古建屋脊，斜生的树干与右侧巨石把画面框住",
+              excerpt: "沿石阶往树荫深处走，剑池的题刻、养鹤涧的水声与云岩寺塔会依次出现。",
+              note: "山林 / 剑池 / 云岩寺塔",
+              date: "2026.07.28",
+              gallery: [
+                {
+                  image: "./assets/images/suzhou-huqiu-01.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-01-thumb.jpg",
+                  alt: "虎丘林间的古建屋脊，斜生的树干与右侧巨石把画面框住",
+                  caption: "树影框住的屋脊"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-02.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-02-thumb.jpg",
+                  alt: "虎丘白墙门洞前的弧形登山石阶与两侧绿植",
+                  caption: "白墙与登山石阶"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-03.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-03-thumb.jpg",
+                  alt: "虎丘浓密树影之间露出的一角黑瓦屋顶",
+                  caption: "藏在林间的屋顶"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-04.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-04-thumb.jpg",
+                  alt: "虎丘剑池石壁上的红色大字与写着别有洞天的圆拱门",
+                  caption: "虎丘剑池"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-05.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-05-thumb.jpg",
+                  alt: "剑池旁湿润的岩壁，绿色苔痕与红色剑池刻字倒映在水边",
+                  caption: "苔痕与刻字"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-06.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-06-thumb.jpg",
+                  alt: "虎丘养鹤涧的石块、浅水、绿树与写着养鹤涧的石刻",
+                  caption: "养鹤涧"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-07.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-07-thumb.jpg",
+                  alt: "虎丘盆景园里停在假山石上的小鸟，旁边是柏树盆景",
+                  caption: "盆景园里的来客"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-08.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-08-thumb.jpg",
+                  alt: "云岩寺塔从虎丘茂密的树冠上方露出，塔身砖石斑驳",
+                  caption: "云岩寺塔"
+                },
+                {
+                  image: "./assets/images/suzhou-huqiu-09.jpg",
+                  thumb: "./assets/images/suzhou-huqiu-09-thumb.jpg",
+                  alt: "从虎丘林间仰望云岩寺塔，前景枝叶在塔身周围围出一圈绿意",
+                  caption: "树梢后的塔影"
+                }
+              ],
               paragraphs: [
-                "平江路的傍晚很好。河面开始反光，沿街的灯一盏一盏亮起来。",
-                "我没有特意找评弹馆，只是顺着水走。走到桥边，听见一段唱腔从窗里漏出来，<em>整条街忽然有了声音</em>。"
+                "七月的苏州很热，进虎丘以后，暑气却被树荫一层层收住。石阶往上，白墙、门洞和藤蔓先露出来，走路的速度也自然慢了下来。",
+                "再往山里走，景色忽然变得很密：斜生的树干把画面分开，黑瓦屋顶藏在枝杈背后，右侧一块巨石压住边缘。<em>虎丘像是先替人把景框好，再让你往里走</em>。",
+                "到剑池，红字从灰色岩壁上跳出来，“别有洞天”的洞门把游人吞进去。再往深处，水贴着石壁，绿色苔痕和红色刻字一起落在暗处。",
+                "继续往上，养鹤涧有石头、浅水和小路，盆景园里一只鸟停在石上；等云岩寺塔从树梢后露出来，才觉得这一路始终有塔在引着。"
               ]
             }
           }
-        ],
-        food: {
-          note: "苏州的味道是细的。汤要清，面要挺，甜味也要收得住。",
-          items: [
-            {
-              title: "苏式汤面",
-              place: "苏州",
-              type: "面食",
-              near: "平江路",
-              image: "./assets/images/food-noodles.jpg",
-              alt: "苏式汤面的示意图片（占位）",
-              note: "汤清，面细而挺，浇头另放在小碟里。先喝一口汤，再把面慢慢吃完，是苏州早晨的节奏。",
-              repeat: "会再点"
-            },
-            {
-              title: "生煎",
-              place: "苏州",
-              type: "小吃",
-              image: "./assets/images/food-breakfast.jpg",
-              alt: "生煎与早餐的示意图片（占位）",
-              note: "底壳煎得脆，咬开先吸汤，再吃肉馅。趁热吃最好，配一碗薄粥刚好。",
-              repeat: "趁热吃"
-            }
-          ]
-        }
+        ]
       },
       {
         id: "nanjing",
-        number: "04",
+        number: "06",
         name: "南京",
         region: "江苏 · 中国",
         date: "2025.10",
         coords: "32°N · 119°E",
         intro:
-          "南京适合沿着梧桐树慢慢走。抬头是城墙，低头是落叶，拐进清凉山脚下的乌龙潭，还能看一池睡莲。",
+          "南京适合沿着梧桐树慢慢走。拐进清凉山脚下的乌龙潭，看一池睡莲，也看附近居民如何过日子。",
         spots: [
-          {
-            id: "zhongshanling",
-            name: "中山陵",
-            scenery: {
-              title: "石阶尽头，是整座钟山",
-              image: "./assets/images/placeholder-street.svg",
-              alt: "中山陵梧桐大道与石阶的占位插画（待替换为实拍）",
-              excerpt: "梧桐把路遮成一条长长的隧道，走过去，城市的声音就慢慢远了。",
-              note: "钟山 / 秋日 / 梧桐",
-              paragraphs: [
-                "去中山陵的那天，梧桐叶已经黄了一半。路两边很高，枝叶在头顶合起来，光从缝隙里落下来。",
-                "石阶比想象中长。走到上面回头看，树海一层一层铺开，<em>南京的秋天就藏在那些慢慢变色的叶子里</em>。"
-              ]
-            }
-          },
-          {
-            id: "qinhuai",
-            name: "秦淮河",
-            scenery: {
-              title: "灯影落在水面上",
-              image: "./assets/images/placeholder-water.svg",
-              alt: "秦淮河与夫子庙灯影的占位插画（待替换为实拍）",
-              excerpt: "天黑以后，河边的灯一盏盏亮起来，画舫从桥下慢慢过去。",
-              note: "秦淮河 / 夜晚 / 夫子庙",
-              paragraphs: [
-                "到夫子庙时天刚暗，秦淮河两岸的灯已经亮了。水面把灯影拉得很长，画舫从桥下过，桨声一下一下。",
-                "街上人很多，但站在河边还是会安静下来。那一刻觉得，<em>南京的热闹和水是连在一起的</em>。"
-              ]
-            }
-          },
           {
             id: "wulongtan",
             name: "乌龙潭公园",
@@ -588,58 +910,69 @@ window.SITE_CONTENT = {
               ]
             }
           }
-        ],
-        food: {
-          note: "南京的味道偏咸鲜。一碗鸭血粉丝汤，再斩半只盐水鸭，刚好把走了一天的胃安顿下来。",
-          items: [
-            {
-              title: "鸭血粉丝汤",
-              place: "南京",
-              type: "汤食",
-              near: "夫子庙",
-              image: "./assets/images/food-noodles.jpg",
-              alt: "鸭血粉丝汤的示意图片（占位）",
-              note: "汤是清的，鸭血嫩，粉丝滑，最后撒一把香菜和辣油。冬天走累了，坐下来喝完整碗，身上就暖了。",
-              repeat: "还会再喝"
-            },
-            {
-              title: "盐水鸭",
-              place: "南京",
-              type: "卤味",
-              image: "./assets/images/food-hero.jpg",
-              alt: "盐水鸭与卤味的示意图片（占位）",
-              note: "皮薄，肉紧，咸味是慢慢出来的。切一盘配米饭，或者边走边吃，都很南京。",
-              repeat: "打包带走"
-            }
-          ]
-        }
+        ]
       }
     ],
     stories: [],
     fragments: [
       {
-        caption: "01 / 柳江边",
-        location: "柳州 · 2026",
-        image: "./assets/images/placeholder-water.svg",
-        alt: "柳江与城市的占位插画"
+        chapter: "落日 / BEFORE DARK",
+        caption: "枝桠间的落日",
+        location: "SUN BETWEEN BRANCHES",
+        image: "./assets/images/exhibition-afterglow-01.jpg",
+        preview: "./assets/images/exhibition-afterglow-01-preview.webp",
+        alt: "落日透过枯树枝桠，橙色天空与水面泛着金光",
+        note: "太阳被枝桠切成许多小块，最后只剩水面上一道很长的金色。"
       },
       {
-        caption: "02 / 泉水与老街",
-        location: "济南 · 2026",
-        image: "./assets/images/placeholder-street.svg",
-        alt: "济南泉水与老街的占位插画"
+        caption: "芦苇荡收住最后一束光",
+        location: "REEDS AT DUSK",
+        image: "./assets/images/exhibition-afterglow-02.jpg",
+        preview: "./assets/images/exhibition-afterglow-02-preview.webp",
+        alt: "芦苇荡中间的一小片水面倒映落日，远处树影沉入暮色",
+        note: "芦苇把湖面围成一个缺口，落日刚好落在缺口中央。"
       },
       {
-        caption: "03 / 水巷",
-        location: "苏州 · 2026",
-        image: "./assets/images/placeholder-water.svg",
-        alt: "苏州水巷的占位插画"
+        caption: "隔着芦苇看湖面",
+        location: "THROUGH THE GRASS",
+        image: "./assets/images/exhibition-afterglow-03.jpg",
+        preview: "./assets/images/exhibition-afterglow-03-preview.webp",
+        alt: "透过金色芦苇与枝叶望向湖面、游船和落日反光",
+        note: "前景的芦苇压暗了画面，湖面反而像被点亮的另一层空间。"
       },
       {
-        caption: "04 / 乌龙潭的倒影",
-        location: "南京 · 2025",
-        image: "./assets/images/nanjing-wulongtan-reflection.jpg",
-        alt: "南京乌龙潭公园的柳树倒映在深绿色水面上"
+        chapter: "余温 / AFTERGLOW",
+        caption: "桥、塔与静水",
+        location: "TWO SILHOUETTES",
+        image: "./assets/images/exhibition-afterglow-04.jpg",
+        preview: "./assets/images/exhibition-afterglow-04-preview.webp",
+        alt: "暮色中的石拱桥、三层塔与平静水面上的倒影",
+        note: "桥洞像一轮低下去的月亮，远处的塔替黄昏留住最后一条轮廓。"
+      },
+      {
+        caption: "花影与马头墙",
+        location: "BLOOM AGAINST THE WALL",
+        image: "./assets/images/exhibition-afterglow-05.jpg",
+        preview: "./assets/images/exhibition-afterglow-05-preview.webp",
+        alt: "开满粉色花的树前，徽派马头墙与红灯笼被夕阳照亮",
+        note: "花、墙和灯笼把同一束夕光分成了三种温度。"
+      },
+      {
+        chapter: "归途 / GOING HOME",
+        caption: "蓝调时刻的水边",
+        location: "BLUE HOUR",
+        image: "./assets/images/exhibition-afterglow-06.jpg",
+        preview: "./assets/images/exhibition-afterglow-06-preview.webp",
+        alt: "蓝调时刻的城市天际线、水面与在浅滩游玩的人群",
+        note: "天已经蓝下来，水边的人还舍不得走，城市刚刚开始亮灯。"
+      },
+      {
+        caption: "水里的孩子",
+        location: "THE LAST BATHER",
+        image: "./assets/images/exhibition-afterglow-07.jpg",
+        preview: "./assets/images/exhibition-afterglow-07-preview.webp",
+        alt: "水边禁止戏水牌旁，一个拿着水桶和铲子走进水里的孩子",
+        note: "一块警告牌、一个孩子和水面的回声，让黄昏有了最后一个动作。"
       }
     ]
   },

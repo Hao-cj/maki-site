@@ -1,6 +1,6 @@
 # Demo image credits
 
-These images are used as visual placeholders for the personal travel website demo.
+These images are used as visual references for the personal travel website demo.
 
 - `hero-mountains.jpg`, `road.jpg`: Unsplash image `photo-1501785888041-af3ef285b470`
 - `siguniang.jpg`: Unsplash image `photo-1464822759023-fed622ff2c3b`
@@ -15,7 +15,7 @@ These images are used as visual placeholders for the personal travel website dem
 - `food-dessert.jpg`: Unsplash image `photo-1551024506-0bccd828d307`
 - `food-breakfast.jpg`: Unsplash image `photo-1493770348161-369560ae357d`
 - `recommend-desk.jpg`: Unsplash image `photo-1499750310107-5fef28a66643`
-- `placeholder-water.svg`, `placeholder-street.svg`: 项目内绘制的通用旅行占位插画，替换为实拍后可直接删除。
 - `liuzhou-wuxing-street.jpg`: 用户提供的柳州五星步行街照片，已缩放压缩用于网页展示。
+- `exhibition-afterglow-01.jpg`—`07.jpg`: 用户提供的黄昏摄影作品，已缩放压缩用于“光的余温”摄影展。
 
 Replace these files with the site owner's own photography when final content is ready.

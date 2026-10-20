@@ -22,7 +22,7 @@ python -m http.server 4173
 - `recommendations.html`：网页、文章、工具与推文收藏清单
 - `styles.css`：视觉样式、响应式布局与动效
 - `script.js`：分类渲染、城市选择、景色/美食页签、菜单与景色故事弹窗
-- `assets/images/`：演示用图片，包含 Unsplash 照片与项目内 SVG 占位插画
+- `assets/images/`：实拍旅行照片、头像与少量演示图片
 - `previews/`：桌面端与移动端效果截图
 
 ## 后续替换
