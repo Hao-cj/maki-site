@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Maki 的推荐清单：网页、文章、工具、影像与值得收藏的推文。"
+    />
+    <meta name="theme-color" content="#090908" />
+    <title>推荐清单｜Maki</title>
+    <script>
+      document.documentElement.classList.replace("no-js", "js");
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="feed-page">
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <div class="page-progress" aria-hidden="true">
+      <span data-progress-bar></span>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="./index.html" aria-label="返回主页">
+        <span class="brand__mark">MK</span>
+        <span class="brand__text">Maki <span>MAKI</span></span>
+      </a>
+
+      <div class="header__right">
+        <p class="header__note">CURATED FEED · 2026</p>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./travel.html">旅游</a>
+          <a href="./recommendations.html">推荐</a>
+          <a href="./index.html#contact">联系</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          data-menu-toggle
+        >
+          <span>MENU</span>
+          <span class="menu-toggle__lines" aria-hidden="true">
+            <i></i><i></i>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>
+      <nav aria-label="移动端导航">
+        <a href="./index.html"><span>01</span>返回主页</a>
+        <a href="./travel.html"><span>02</span>旅游</a>
+        <a href="./recommendations.html"><span>03</span>推荐</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <p>把值得再看一次的东西，<br />留在这里。</p>
+        <span>MAKI · CURATED FEED</span>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="feed-hero-title" data-hero>
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="./assets/images/recommend-desk.jpg"
+            alt=""
+            data-hero-image
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__light" aria-hidden="true"></div>
+        <div class="hero__frame" aria-hidden="true"></div>
+
+        <div class="hero__content container">
+          <p class="eyebrow hero__eyebrow">
+            <span>CURATED FEED / 推荐清单</span>
+            <span>BOOKMARKED BY MAKI</span>
+          </p>
+
+          <h1 class="hero__title" id="feed-hero-title">
+            <span class="hero__line"><span>值得收藏的</span></span>
+            <span class="hero__line hero__line--indent"
+              ><span><em>网页与推文</em>。</span></span
+            >
+          </h1>
+
+          <div class="hero__bottom">
+            <div class="hero__intro">
+              <p>
+                我平时会把喜欢的文章、网站、工具和推文放进收藏夹。
+                这里挑出那些值得再看一次的内容。
+              </p>
+              <span class="hero__role">06 BOOKMARKS / UPDATE OFTEN / CURATED BY MAKI</span>
+            </div>
+            <a class="circle-link" href="#feed" aria-label="浏览推荐清单">
+              <span>INDEX</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v16M6 14l6 6 6-6" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__foot">
+            <span>READ LESS, SAVE BETTER</span>
+            <span>WEB / IMAGE / WORDS</span>
+            <span>CURATED WITH CURIOSITY</span>
+          </div>
+        </div>
+
+        <p class="hero__aside" aria-hidden="true">CURATED LINKS & NOTES</p>
+      </section>
+
+      <section class="feed-section section-pad" id="feed" aria-labelledby="feed-title">
+        <div class="container">
+          <div class="section-kicker" data-reveal>
+            <span class="section-kicker__num">01</span>
+            <span>BOOKMARKS</span>
+            <i aria-hidden="true"></i>
+            <span>收藏夹</span>
+          </div>
+
+          <div class="feed-section__head">
+            <h2 id="feed-title" data-reveal>
+              最近，<br /><em>收藏了什么。</em>
+            </h2>
+            <div data-reveal>
+              <span>SELECTED LINKS</span>
+              <p>
+                网页、长文、工具与偶尔读到的好句子。
+                下列链接为示例推荐，之后可以替换成你自己的收藏。
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="food-filter feed-filter"
+            role="group"
+            aria-label="按推荐类型筛选"
+            data-reveal
+            data-feed-filters
+          >
+            <button class="is-active" type="button" data-feed-filter="all" aria-pressed="true">
+              全部
+            </button>
+            <button type="button" data-feed-filter="read" aria-pressed="false">阅读</button>
+            <button type="button" data-feed-filter="site" aria-pressed="false">网站</button>
+            <button type="button" data-feed-filter="tool" aria-pressed="false">工具</button>
+            <button type="button" data-feed-filter="tweet" aria-pressed="false">推文</button>
+          </div>
+
+          <div class="feed-list" data-feed-list>
+            <article class="feed-item" data-feed-category="read" data-reveal>
+              <div class="feed-item__meta">
+                <span>阅读</span>
+                <time>2026.10</time>
+              </div>
+              <a
+                class="feed-item__main"
+                href="https://www.themarginalian.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <h3>The Marginalian</h3>
+                  <p>关于艺术、科学和如何好好生活的长期写作，适合留一个周末慢慢读。</p>
+                </div>
+                <span class="feed-item__source">themarginalian.org ↗</span>
+              </a>
+            </article>
+
+            <article class="feed-item" data-feed-category="site" data-reveal>
+              <div class="feed-item__meta">
+                <span>网站</span>
+                <time>2026.09</time>
+              </div>
+              <a
+                class="feed-item__main"
+                href="https://www.are.na/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <h3>Are.na</h3>
+                  <p>把图片、链接和想法连成自己的研究地图。很适合整理旅行与视觉灵感。</p>
+                </div>
+                <span class="feed-item__source">are.na ↗</span>
+              </a>
+            </article>
+
+            <article class="feed-item" data-feed-category="tool" data-reveal>
+              <div class="feed-item__meta">
+                <span>工具</span>
+                <time>2026.09</time>
+              </div>
+              <a
+                class="feed-item__main"
+                href="https://milanote.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <h3>Milanote</h3>
+                  <p>无限画布式的整理工具，我在上面拼旅行路线、内容草稿和零散的收藏。</p>
+                </div>
+                <span class="feed-item__source">milanote.com ↗</span>
+              </a>
+            </article>
+
+            <article class="feed-item" data-feed-category="read" data-reveal>
+              <div class="feed-item__meta">
+                <span>阅读</span>
+                <time>2026.08</time>
+              </div>
+              <a
+                class="feed-item__main"
+                href="https://thecreativeindependent.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <h3>The Creative Independent</h3>
+                  <p>创作者的访谈和工作方法。每次没有灵感时，翻两篇就会想重新开始。</p>
+                </div>
+                <span class="feed-item__source">thecreativeindependent.com ↗</span>
+              </a>
+            </article>
+
+            <article class="feed-item feed-item--quote" data-feed-category="tweet" data-reveal>
+              <div class="feed-item__meta">
+                <span>推文摘录</span>
+                <time>SAVED</time>
+              </div>
+              <div>
+                <blockquote>
+                  “Somewhere, something incredible is waiting to be known.”
+                </blockquote>
+                <div class="feed-item__quote-foot">
+                  <span>— CARL SAGAN</span>
+                  <span>常读常新</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="feed-item" data-feed-category="site" data-reveal>
+              <div class="feed-item__meta">
+                <span>网站</span>
+                <time>2026.07</time>
+              </div>
+              <a
+                class="feed-item__main"
+                href="https://www.itsnicethat.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <h3>It's Nice That</h3>
+                  <p>每天更新的创意网站，适合看看平面、摄影、插画和那些不太好分类的新东西。</p>
+                </div>
+                <span class="feed-item__source">itsnicethat.com ↗</span>
+              </a>
+            </article>
+          </div>
+
+          <p class="food-demo-note">SAMPLE BOOKMARKS · 外链与推荐内容均可替换</p>
+        </div>
+      </section>
+
+      <section class="curation-note section-pad" aria-labelledby="curation-title">
+        <div class="container">
+          <div class="section-kicker" data-reveal>
+            <span class="section-kicker__num">02</span>
+            <span>WHY I SAVE</span>
+            <i aria-hidden="true"></i>
+            <span>收藏原则</span>
+          </div>
+
+          <div class="curation-note__grid">
+            <h2 id="curation-title" data-reveal>
+              不是信息越多越好，<br /><em>是留下来的值得再看。</em>
+            </h2>
+            <div class="curation-note__points">
+              <div data-reveal>
+                <span>01</span>
+                <p>看完之后，会想立刻去试、去做，或者去某个地方。</p>
+              </div>
+              <div data-reveal>
+                <span>02</span>
+                <p>过一阵子再打开，依然能从里面发现新的东西。</p>
+              </div>
+              <div data-reveal>
+                <span>03</span>
+                <p>它让我换一种方式看日常，而不只是短暂地分散注意力。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="feed-end" aria-labelledby="feed-end-title">
+        <div class="contact__glow" aria-hidden="true"></div>
+        <div class="contact__word" aria-hidden="true">NEXT</div>
+        <div class="container contact__content">
+          <div class="section-kicker section-kicker--light" data-reveal>
+            <span class="section-kicker__num">03</span>
+            <span>END OF FEED</span>
+            <i aria-hidden="true"></i>
+            <span>本页结束</span>
+          </div>
+
+          <p class="contact__lead" data-reveal>
+            收藏夹会继续更新。
+            <br />如果你也有想分享给我的网页，欢迎来交换。
+          </p>
+          <h2 id="feed-end-title" data-reveal>
+            回主页，<br /><em>继续逛逛。</em>
+          </h2>
+
+          <a class="contact__mail" href="./index.html" data-reveal>
+            <span>BACK TO HOME</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <div class="contact__social" data-reveal>
+            <a href="./travel.html">旅游</a>
+            <a href="./index.html#about">关于 Maki</a>
+            <a href="./index.html#contact">联系 Maki</a>
+          </div>
+        </div>
+
+        <footer class="site-footer container">
+          <p>© 2026 MAKI · CURATED FEED</p>
+          <p>推荐分页 · 外链与文字均为示例内容</p>
+          <a href="#top">BACK TO TOP ↑</a>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./content.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
