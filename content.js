@@ -4,7 +4,7 @@ window.SITE_CONTENT = {
       label: "旅游",
       english: "TRAVEL JOURNAL",
       description: "按城市整理每一段旅程，点进去看景点与城市味道。",
-      meta: "06 DESTINATIONS",
+      meta: "07 DESTINATIONS",
       href: "./travel.html",
       image: "./assets/images/taian-mount-tai-08.jpg",
       imageAlt: "泰山日出的旅行笔记封面",
@@ -106,8 +106,8 @@ window.SITE_CONTENT = {
         "不是每个景点都要配一顿饭，有就记下，没有也不硬凑。只记录那些愿意再看一眼、再吃一次的瞬间。"
       ],
       stats: [
-        { value: "06", label: "座城市" },
-        { value: "13", label: "段景色" },
+        { value: "07", label: "座城市" },
+        { value: "17", label: "段景色" },
         { value: "03", label: "次回味" }
       ]
     },
@@ -907,6 +907,211 @@ window.SITE_CONTENT = {
               paragraphs: [
                 "乌龙潭公园就在广州路边，挨着清凉山。进门走几步，一池水先出现在眼前：柳枝垂到水面，睡莲和圆叶一层层铺开。",
                 "沿水走一圈，会遇见锦鲤、黑水鸡，也会遇见晒太阳和遛弯的附近居民。这里没有必须走完的路线，<em>城市就在墙外，园子里却像慢了半拍</em>。"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        id: "qingdao",
+        number: "07",
+        name: "青岛",
+        region: "山东 · 中国",
+        date: "2026.06.15—16",
+        coords: "36°N · 120°E",
+        heroImage: "./assets/images/qingdao-wusi-square-01.jpg",
+        intro:
+          "从沙子口的红屋顶海岸，到崂山灵旗峰的山海与海雾，再经过青岛啤酒博物馆的红砖厂房，沿浮山湾走到五四广场，看“五月的风”被高楼围住。",
+        spots: [
+          {
+            id: "may-wind",
+            name: "五四广场",
+            scenery: {
+              title: "红色的风，停在海边",
+              image: "./assets/images/qingdao-wusi-square-01.jpg",
+              alt: "青岛五四广场的红色螺旋雕塑“五月的风”，背后是浮山湾城市天际线",
+              excerpt: "六月的晴天里，红色螺旋雕塑立在广场中央，背后是浮山湾的高楼与海风。",
+              note: "城市地标 / 晴天 / 浮山湾",
+              gallery: [
+                {
+                  image: "./assets/images/qingdao-wusi-square-01.jpg",
+                  thumb: "./assets/images/qingdao-wusi-square-01-thumb.jpg",
+                  alt: "青岛五四广场的红色螺旋雕塑“五月的风”，背后是浮山湾城市天际线",
+                  caption: "五月的风与浮山湾"
+                },
+                {
+                  image: "./assets/images/qingdao-wusi-square-02.jpg",
+                  thumb: "./assets/images/qingdao-wusi-square-02-thumb.jpg",
+                  alt: "蓝天下红色螺旋雕塑“五月的风”的清晰近景",
+                  caption: "抬头看“五月的风”"
+                },
+                {
+                  image: "./assets/images/qingdao-wusi-square-03.jpg",
+                  thumb: "./assets/images/qingdao-wusi-square-03-thumb.jpg",
+                  alt: "五四广场附近的玻璃幕墙高楼与红色吊车",
+                  caption: "广场旁的高楼"
+                },
+                {
+                  image: "./assets/images/qingdao-wusi-square-04.jpg",
+                  thumb: "./assets/images/qingdao-wusi-square-04-thumb.jpg",
+                  alt: "从五四广场海边俯看泛着白沫的海水与石砌岸边",
+                  caption: "栏杆外的海水"
+                },
+                {
+                  image: "./assets/images/qingdao-wusi-square-05.jpg",
+                  thumb: "./assets/images/qingdao-wusi-square-05-thumb.jpg",
+                  alt: "海面上漂浮的菠萝造型浮标与远处航标",
+                  caption: "海面上的菠萝浮标"
+                }
+              ],
+              paragraphs: [
+                "到五四广场时天很晴。先认出的是广场中央那座红色的“五月的风”——螺旋形钢结构一圈圈向上收拢，在蓝天下格外醒目。",
+                "绕着广场走，背后的高楼、玻璃幕墙和城市天际线一并进入画面。六月十六日的光很硬，<em>红色、蓝色和灰色被分得清清楚楚</em>。",
+                "再往海边走，栏杆外就是浮山湾。海水拍着石岸，远处还漂着一只菠萝造型的浮标，<em>城市地标和海边的小细节就这样连在一起</em>。"
+              ]
+            }
+          },
+          {
+            id: "shazikou",
+            name: "沙子口",
+            scenery: {
+              title: "红屋顶，沿着海岸往上走",
+              image: "./assets/images/qingdao-shazikou-01.jpg",
+              alt: "海鸥飞过青岛沙子口的红屋顶海岸和岩石山丘",
+              excerpt: "隔着海湾回望，红瓦白墙、礁石山体和低空掠过的海鸥一起停在画面里。",
+              note: "海湾 / 海鸥 / 红屋顶",
+              gallery: [
+                {
+                  image: "./assets/images/qingdao-shazikou-01.jpg",
+                  thumb: "./assets/images/qingdao-shazikou-01-thumb.jpg",
+                  alt: "海鸥飞过青岛沙子口的红屋顶海岸和岩石山丘",
+                  caption: "海鸥掠过沙子口"
+                },
+                {
+                  image: "./assets/images/qingdao-shazikou-02.jpg",
+                  thumb: "./assets/images/qingdao-shazikou-02-thumb.jpg",
+                  alt: "隔着海湾望向沙子口，红瓦白墙的房屋沿山坡铺开",
+                  caption: "红屋顶与海岸线"
+                },
+                {
+                  image: "./assets/images/qingdao-shazikou-03.jpg",
+                  thumb: "./assets/images/qingdao-shazikou-03-thumb.jpg",
+                  alt: "从沙子口岸边望向海湾、远处红屋顶建筑与山丘",
+                  caption: "从岸边回望"
+                }
+              ],
+              paragraphs: [
+                "到沙子口时，海面很平，近处的楼和山坡上的房子一层层排开。抬头刚好有一只海鸥张开翅膀掠过天空。",
+                "沿着岸边走，白墙、红瓦和岩石山体挤在同一个画面里。这里不像市中心那样整齐，反倒因为高低错落，更像一座真正贴着海岸长出来的镇子。",
+                "隔着水回望，防波堤、红屋顶和背后的山一层层退远。海鸥偶尔从镜头前飞过，<em>沙子口最动人的不是某一栋建筑，而是整片海岸一起呼吸的样子</em>。"
+              ]
+            }
+          },
+          {
+            id: "beer-museum",
+            name: "青岛啤酒博物馆",
+            scenery: {
+              title: "红砖楼里，留下一杯泡沫",
+              image: "./assets/images/qingdao-beer-museum-01.jpg",
+              alt: "青岛啤酒博物馆红砖外墙、白色窗框与博物馆中英文招牌",
+              excerpt: "从红砖外墙一路看到品鉴区，啤酒的颜色、香气和泡沫把参观变成了坐下来的一小段时间。",
+              note: "红砖建筑 / 啤酒 / 品鉴区",
+              gallery: [
+                {
+                  image: "./assets/images/qingdao-beer-museum-01.jpg",
+                  thumb: "./assets/images/qingdao-beer-museum-01-thumb.jpg",
+                  alt: "青岛啤酒博物馆红砖外墙、白色窗框与博物馆中英文招牌",
+                  caption: "红砖楼与博物馆"
+                },
+                {
+                  image: "./assets/images/qingdao-beer-museum-02.jpg",
+                  thumb: "./assets/images/qingdao-beer-museum-02-thumb.jpg",
+                  alt: "青岛啤酒博物馆展厅里，一只手举着带有丰富泡沫的啤酒",
+                  caption: "展厅里的第一杯"
+                },
+                {
+                  image: "./assets/images/qingdao-beer-museum-03.jpg",
+                  thumb: "./assets/images/qingdao-beer-museum-03-thumb.jpg",
+                  alt: "木质长桌中央放着一杯青岛啤酒，周围是品鉴区的座椅和游客",
+                  caption: "木桌前的品鉴时间"
+                }
+              ],
+              paragraphs: [
+                "青岛啤酒博物馆藏在登州路的老厂房里，红砖外墙、白色窗框和爬在墙上的藤蔓，先替它保留了一点旧时光。",
+                "走进展厅，灯光落在啤酒杯和展板上。金黄色的酒液、细密的泡沫和深色空间正好形成反差，<em>一杯普通的啤酒也像成了一件需要慢慢看的展品</em>。",
+                "走到品鉴区，长木桌和靠背椅围出一块可以停下来的地方。把杯子放在桌上，看泡沫慢慢落下，参观的节奏也从一路向前变成了坐下来歇一会儿。"
+              ]
+            }
+          },
+          {
+            id: "laoshan",
+            name: "崂山 · 灵旗峰",
+            scenery: {
+              title: "爬到 1033 米，山海在脚下铺开",
+              image: "./assets/images/qingdao-laoshan-01.jpg",
+              alt: "崂山灵旗峰观景台，游客站在岩石步道上眺望海雾中的山海",
+              excerpt: "从灵旗峰往下看，花岗岩山脊一层层退向海湾，远处岛屿和船只被海雾轻轻收住。",
+              note: "登山 / 海雾 / 灵旗峰",
+              gallery: [
+                {
+                  image: "./assets/images/qingdao-laoshan-01.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-01-thumb.jpg",
+                  alt: "崂山灵旗峰观景台，游客站在岩石步道上眺望海雾中的山海",
+                  caption: "灵旗峰上的山海"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-02.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-02-thumb.jpg",
+                  alt: "从崂山高处俯瞰花岗岩山脊、海湾与远处岛屿",
+                  caption: "山脊一路退向海湾"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-03.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-03-thumb.jpg",
+                  alt: "从崂山观景栏杆望向山谷、海面和远岛",
+                  caption: "栏杆外的崂山"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-04.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-04-thumb.jpg",
+                  alt: "崂山灵旗峰 1033 米高度牌，背景是层叠山脊与海面",
+                  caption: "1033 米，灵旗峰"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-05.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-05-thumb.jpg",
+                  alt: "山顶石柱上放着一瓶崂山可乐，背景是崂山山脊与海湾",
+                  caption: "山顶的第一口崂山可乐"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-06.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-06-thumb.jpg",
+                  alt: "崂山山间绿树掩映的巽门牌楼",
+                  caption: "树影里的山门"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-07.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-07-thumb.jpg",
+                  alt: "崂山石阶旁两只小猫在树下休息",
+                  caption: "石阶旁午睡的猫"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-08.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-08-thumb.jpg",
+                  alt: "崂山地面上一只虎斑白胸小猫",
+                  caption: "躲在台阶后的猫"
+                },
+                {
+                  image: "./assets/images/qingdao-laoshan-09.jpg",
+                  thumb: "./assets/images/qingdao-laoshan-09-thumb.jpg",
+                  alt: "崂山树荫下坐着一只白灰相间的猫",
+                  caption: "树荫下安静的猫"
+                }
+              ],
+              paragraphs: [
+                "上崂山时，天色不算透亮。石阶、岩石和绿色的树一层层往上叠，走到灵旗峰，海雾已经把更远的山脊和岛屿收得很轻。",
+                "往下看，花岗岩山体像被海风削出许多棱角，观景平台和深色亭子挂在岩壁边。海在山脚转弯，船和岛只剩下一点点轮廓，<em>崂山的好看就在山与海没有明确的分界</em>。",
+                "一路也有许多不赶路的瞬间：山顶的一瓶崂山可乐、树影里的巽门，还有石阶旁睡得正香的猫。它们让这段 1033 米的登山记忆不只有壮阔，也有很轻、很近的部分。"
               ]
             }
           }
