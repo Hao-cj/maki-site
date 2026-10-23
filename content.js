@@ -107,7 +107,7 @@ window.SITE_CONTENT = {
       ],
       stats: [
         { value: "07", label: "座城市" },
-        { value: "17", label: "段景色" },
+        { value: "18", label: "段景色" },
         { value: "03", label: "次回味" }
       ]
     },
@@ -907,6 +907,41 @@ window.SITE_CONTENT = {
               paragraphs: [
                 "乌龙潭公园就在广州路边，挨着清凉山。进门走几步，一池水先出现在眼前：柳枝垂到水面，睡莲和圆叶一层层铺开。",
                 "沿水走一圈，会遇见锦鲤、黑水鸡，也会遇见晒太阳和遛弯的附近居民。这里没有必须走完的路线，<em>城市就在墙外，园子里却像慢了半拍</em>。"
+              ]
+            }
+          },
+          {
+            id: "jiming-temple",
+            name: "鸡鸣寺",
+            scenery: {
+              title: "雨落鸡鸣寺，飞檐一层层收进树影",
+              image: "./assets/images/nanjing-jiming-temple-pagoda.jpg",
+              alt: "南京鸡鸣寺黄墙、飞檐与金色塔刹在阴雨天被树木框住",
+              excerpt: "去的那天正下着小雨，网红景点游客不少；抬头看见塔身与飞檐时，还是值得停一会儿。",
+              note: "古寺 / 小雨 / 山门",
+              gallery: [
+                {
+                  image: "./assets/images/nanjing-jiming-temple-pagoda.jpg",
+                  thumb: "./assets/images/nanjing-jiming-temple-pagoda-thumb.jpg",
+                  alt: "南京鸡鸣寺黄墙、飞檐与金色塔刹在阴雨天被树木框住",
+                  caption: "树影里的塔"
+                },
+                {
+                  image: "./assets/images/nanjing-jiming-temple-gate.jpg",
+                  thumb: "./assets/images/nanjing-jiming-temple-gate-thumb.jpg",
+                  alt: "雨天南京鸡鸣寺石牌坊上的金色寺名",
+                  caption: "雨中的山门"
+                },
+                {
+                  image: "./assets/images/nanjing-jiming-temple-eaves.jpg",
+                  thumb: "./assets/images/nanjing-jiming-temple-eaves-thumb.jpg",
+                  alt: "从鸡鸣寺院墙与屋檐之间仰望多层塔身和金色塔刹",
+                  caption: "屋檐之间"
+                }
+              ],
+              paragraphs: [
+                "鸡鸣寺，我去的那天正下着小雨。灰白的天空、黄色院墙和深色飞檐都被雨水压低了饱和度，山门上的金色字反倒更醒目。",
+                "这里游客确实不少，牌坊前一直有人停步拍照。可绕到院墙与屋檐之间抬头，塔身一层层收进树影里，<em>雨声和人群的喧闹就被分到了画面之外</em>。"
               ]
             }
           }
