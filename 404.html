@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#090908" />
+    <title>页面走丢了｜Maki</title>
+    <style>
+      :root {
+        --ink: #090908;
+        --cream: #e9e2d5;
+        --muted: #958e81;
+        --line: rgba(233, 226, 213, 0.17);
+        --accent: #c66843;
+        --serif: "Iowan Old Style", "Bodoni 72", "Times New Roman", "Songti SC",
+          "STSong", "SimSun", serif;
+        --sans: "Helvetica Neue", "PingFang SC", "Microsoft YaHei",
+          "Noto Sans SC", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: clamp(1.5rem, 6vw, 5rem);
+        background:
+          radial-gradient(circle at 78% 12%, rgba(198, 104, 67, 0.16), transparent 42%),
+          var(--ink);
+        color: var(--cream);
+        font-family: var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main {
+        width: min(46rem, 100%);
+        border-top: 1px solid var(--line);
+        padding-top: clamp(1.5rem, 4vw, 2.75rem);
+      }
+
+      p.kicker {
+        margin: 0 0 clamp(1rem, 3vw, 1.75rem);
+        font-size: 0.72rem;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: clamp(3.25rem, 12vw, 7.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+      }
+
+      h1 span { color: var(--accent); }
+
+      p.lead {
+        margin: clamp(1.25rem, 3.5vw, 2rem) 0 clamp(2rem, 5vw, 3rem);
+        max-width: 32rem;
+        font-size: clamp(0.95rem, 2.4vw, 1.05rem);
+        line-height: 1.85;
+        color: var(--muted);
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.85rem 1.4rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--cream);
+        font-size: 0.82rem;
+        letter-spacing: 0.14em;
+        text-decoration: none;
+        transition: border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      a:hover,
+      a:focus-visible {
+        border-color: var(--accent);
+        color: var(--ink);
+        background: var(--accent);
+        outline: none;
+      }
+
+      footer {
+        margin-top: clamp(2.5rem, 7vw, 4rem);
+        font-size: 0.72rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: rgba(149, 142, 129, 0.7);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        a { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="kicker">Error 404</p>
+      <h1>这条路<br />没有<span>尽头</span></h1>
+      <p class="lead">
+        想找的页面不在这里，可能是链接写错了，或者它已经搬了家。回到主页看看，或者从旅游记录重新出发。
+      </p>
+      <nav aria-label="返回">
+        <a href="./index.html">回到主页</a>
+        <a href="./travel.html">旅游记录</a>
+        <a href="./recommendations.html">推荐清单</a>
+      </nav>
+      <footer>Maki · Personal Archive</footer>
+    </main>
+  </body>
+</html>

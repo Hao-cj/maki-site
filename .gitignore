@@ -4,7 +4,10 @@ dist/
 Sucai/
 Maki-个人网站.zip
 .chrome-*/
-_verify*.js
+_verify*
+_publish/
+tools/
+.ossutil_checkpoint/
 
 # Editor and OS files
 .DS_Store
